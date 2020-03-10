@@ -1,0 +1,42 @@
+## try:     This the block of code to be attempted (may lead to an error)
+##except:   Block of code will execute in case there is an error in try block
+##finally:   A final block of code to be executed, regardless of an error.
+
+def add(n1,n2):
+    print(n1+n2)
+
+add(10,20)
+print("1.###################################################################")
+try:
+    result = 10 + 10
+except:
+    print("Hey it looks like you arent adding correctly")
+else:
+    print("Add went well")
+    print(result)
+print("2.###################################################################")
+try:
+    f = open('testfile', 'r')
+    f.write("write a test line")
+except TypeError:
+    print("There was a type error")
+except:
+    print("All other exceptions!!")
+finally:
+    print("I always run")
+print("3.###################################################################")
+def ask_for_int():
+    while True:
+        try:
+            result = int(input("Please provide number:"))
+        except:
+            print("whoops! that is not a number")
+            continue
+        else:
+            print("yes thank you")
+            break
+        finally:
+            print("end of try/except/finally")
+            print("I will always run at the end")
+ask_for_int()
+print("###################################################################")
